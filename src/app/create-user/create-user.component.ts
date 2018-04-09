@@ -11,8 +11,8 @@ import { UserService } from '../user.service';
 })
 export class CreateUserComponent implements OnInit {
 
-  constructor(private authService: AuthService, private userService: UserService) { }
-
+  constructor(private authService: AuthService, private userService: UserService) {
+  }
   ngOnInit() {
   }
 
@@ -20,6 +20,5 @@ export class CreateUserComponent implements OnInit {
     let newUser: User = new User(userName, email)
     this.authService.createUser(newUser.email, password);
       this.userService.addUser(newUser);
-  }
-
+    }
 }
