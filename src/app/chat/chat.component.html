@@ -1,1 +1,22 @@
+<div class="section">
 
+  <h5 class="light">Basic select</h5>
+
+  <div class="row m-valign-wrapper">
+
+    <mz-select-container class="col s12 m6">
+      <select mz-select
+        id="basic-select"
+        [label]="'Label'"
+        [placeholder]="'Placeholder'"
+      >
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+    </mz-select-container>
+
+    <p class="col s12 m6">
+      Label and placeholder can be combined using both <code class="language-markup">label</code> and <code class="language-markup">placeholder</code> properties.
+    </p>
+  </div>
