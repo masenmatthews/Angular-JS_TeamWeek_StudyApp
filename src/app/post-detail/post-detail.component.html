@@ -1,8 +1,21 @@
-<h1>Title: {{(postDetail | async)?.title}}</h1>
-<br>
-<h1>username: {{(postDetail | async)?.owner}} </h1>
-<br>
-<h1> Description <h1>
-<h2>{{(postDetail | async)?.description}}</h2>
-<app-add-comment></app-add-comment>
-<h2>Comments:</h2>
+<div class="container">
+  <div class="row">
+    <div class="z-depth-4 col s12 md6">
+      <div class="card-content blue-grey white-text">
+        <span class="card-title">Title: {{(postDetail | async)?.title}}</span>
+      </div>
+      <div class="card-content white-text blue-grey darken-2">
+        <div class="row">
+          <div class="col s12 m6">
+              <h1>Username: {{(postDetail | async)?.owner}} </h1>
+              <br>
+              <h1> Description </h1>
+              <h2>{{(postDetail | async)?.description}}</h2>
+              <app-add-comment></app-add-comment>
+              <h2>Comments:</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
