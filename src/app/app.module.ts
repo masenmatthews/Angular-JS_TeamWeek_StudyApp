@@ -6,6 +6,7 @@ import { MzButtonModule, MzInputModule, MzSelectModule } from 'ng2-materialize';
 import { AppComponent } from './app.component';
 import { NewForumPostComponent } from './new-forum-post/new-forum-post.component';
 import { ChatComponent } from './chat/chat.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ChatComponent } from './chat/chat.component';
     AppComponent,
     NewForumPostComponent,
     ChatComponent,
+    WelcomeComponent,
 
   ],
   imports: [
