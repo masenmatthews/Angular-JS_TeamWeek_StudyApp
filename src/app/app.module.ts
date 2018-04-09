@@ -22,6 +22,7 @@ import { RemovePostComponent } from './remove-post/remove-post.component';
 
 //key
 import { firebaseApiKey } from './api-keys';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 //Configure firebase
 export const firebaseConfig = {
@@ -39,7 +40,8 @@ export const firebaseConfig = {
     AddPostComponent,
     PostDetailComponent,
     PostListComponent,
-    RemovePostComponent
+    RemovePostComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
