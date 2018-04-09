@@ -23,7 +23,7 @@ export class AddPostComponent implements OnInit {
     }
 
     addPost(title: string, owner: string, body: string) {
-      const newPost:ForumPost = new ForumPost(title, owner, body);
+      const newPost: ForumPost = new ForumPost(title, owner, body);
 
       this.forumService.addPost(newPost);
       this.toggleDisplay();

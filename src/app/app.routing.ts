@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Welcome
-import { WelcomeComponent } from './welcome/welcome.component';
+// import { WelcomeComponent } from './welcome/welcome.component';
 
 
 //forum
@@ -15,10 +15,10 @@ import { PostListComponent } from './post-list/post-list.component';
 // import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
-  {
-     path: '',
-     component: WelcomeComponent
-   },
+  // {
+  //    path: '',
+  //    component: WelcomeComponent
+  //  },
   {
     path: 'posts',
     component: PostListComponent

@@ -8,7 +8,8 @@ import { ForumService } from '../post.service';
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.css']
+  styleUrls: ['./post-list.component.css'],
+  providers: [ForumService]
 })
 export class PostListComponent implements OnInit {
 

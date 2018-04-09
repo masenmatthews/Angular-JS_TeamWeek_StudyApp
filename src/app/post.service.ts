@@ -14,14 +14,14 @@ export class ForumService {
   }
 
   getPosts() {
-  return this.posts;
+    return this.posts;
   }
 
   addPost(newPost: ForumPost) {
     this.posts.push(newPost);
   }
 
-  getPostByKey(postId: string) {
+  getPostById(postId: string) {
   return this.database.object('posts/' + postId);
   }
 

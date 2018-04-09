@@ -21,7 +21,7 @@ export class PostDetailComponent implements OnInit {
       this.route.params.forEach((urlParameters)=> {
         this.postKey = urlParameters['id'];
       });
-      this.postDetail = this.forumService.getPostByKey(this.postKey);
+      this.postDetail = this.forumService.getPostById(this.postKey);
     }
 
   }
