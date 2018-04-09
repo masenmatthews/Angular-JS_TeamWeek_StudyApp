@@ -1,6 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { appRoutes } from './app.routing';
+import { AuthService } from './auth.service';
 
 import { MzButtonModule, MzInputModule, MzSelectModule } from 'ng2-materialize';
 import { AppComponent } from './app.component';
@@ -22,7 +29,10 @@ import { CreateUserComponent } from './create-user/create-user.component';
     NoopAnimationsModule,
     MzButtonModule,
     MzInputModule,
-    MzSelectModule
+    MzSelectModule,
+    RouterModule.forRoot(appRoutes),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

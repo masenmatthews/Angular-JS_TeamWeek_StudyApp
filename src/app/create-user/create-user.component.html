@@ -1,18 +1,37 @@
-<div class="section">
-
-  <h5 class="light">Create New Account</h5>
-
-  <div class="row m-valign-wrapper">
-
-    <mz-input-container class="col s12 m6">
-      <input mz-input
-        [label]="'Label'"
-        id="basic-input-placeholder"
-        placeholder="Placeholder"
-        type="text">
-    </mz-input-container>
-
-    <p class="col s12 m6">
-      Label and placeholder can be combined using both <code class="language-markup">label</code> and <code class="language-markup">placeholder</code> properties.
-    </p>
-  </div>
+<div class="container">
+    <div class="row">
+      <div class="col s12 md6">
+        <div class="card">
+          <div class="card-content blue-grey white-text">
+            <span class="card-title white-text ">Create New Account</span>
+          </div>
+          <div class="card-content blue-grey darken-2">
+            <div class="row m-valign-wrapper">
+              <mz-input-container class="col s12 m6">
+                <input #newUserName class="white-text" mz-input
+                  [label]="'User Name'"
+                  id="userNameInput"
+                  placeholder="Choose a unique username"
+                  type="text">
+              </mz-input-container>
+              <mz-input-container class="col s12 m6">
+                <input #newEmail class="white-text"mz-input
+                  [label]="'Email'"
+                  id="emailInput"
+                  placeholder="Enter Email"
+                  type="text">
+              </mz-input-container>
+              <mz-input-container class="col s12 m6">
+                <input #newPassword class="white-text" mz-input
+                  [label]="'Password'"
+                  id="passwordInput"
+                  placeholder="Enter Password"
+                  type="text">
+              </mz-input-container>
+              <button (click)="createAccount(newUserName.value, newEmail.value, newPassword.value)" class="btn">Add Account</button>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>
