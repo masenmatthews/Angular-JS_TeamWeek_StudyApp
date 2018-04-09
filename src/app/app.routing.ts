@@ -1,7 +1,7 @@
 
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { CreateUserComponent } from './create-user/create-user.component'
 // Welcome
 // import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -15,7 +15,7 @@ import { PostListComponent } from './post-list/post-list.component';
 //Admin
 // import { AdminComponent } from './admin/admin.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   // {
   //    path: '',
   //    component: WelcomeComponent
@@ -31,6 +31,11 @@ const appRoutes: Routes = [
   {
     path: 'posts/:id',
     component: PostDetailComponent
+  },
+  {
+    path: 'createUser',
+    component: CreateUserComponent
+
   }
 
   // {
