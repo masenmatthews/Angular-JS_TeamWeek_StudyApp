@@ -1,0 +1,17 @@
+<button (click)="toggleDisplay()" type="button" name="button" class="btn">Add a game</button>
+
+<div *ngIf="toggle">
+	<div class="container">
+  <h1>Add a game</h1>
+  <form>
+    <label for="Title">Title : </label>
+      <input type="text" name="Title" placeholder='Final Fantasy' #title>
+    <label for="Owner">User: </label>
+      <input type="text"  name="Owner" placeholder='Billy Bob' #owner>
+    <label for="body">Description : </label>
+        <input type="text" id="desc" name="body" placeholder='' #body>
+        <button  class="btn btn-info" name="Add Post"(click)="addPost(owner.value,title.value,body.value); owner.value = ''; title.value = ''; body.value = '';">Submit</button>
+        <button type="button" class="btn btn-danger ml-2" name="Close" (click)="toggleDisplay()">Cancel</button>
+  </form>
+  </div>
+</div>

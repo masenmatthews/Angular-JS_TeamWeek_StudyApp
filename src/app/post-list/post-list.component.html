@@ -1,0 +1,19 @@
+<h1>Forum: </h1>
+
+<div class="container">
+  <div *ngFor="let post of posts | async">
+      <h1><strong>Owner: </strong> {{post.owner}}</h1>
+      <div class="card-body bg-light">
+<br>
+        <h2>Title: <strong>{{post.title}}</strong></h2>
+<br>
+        <h2>Summery: <strong>${{post.body}}</strong></h2>
+<br>
+        <!-- <app-remove-game [gameKey]="game" *ngIf="currentRoute === '/admin'"></app-remove-game> -->
+
+        <button type="button" class="btn btn-success" name="button" (click)="details(post)">More Details</button>
+      </div>
+  </div>
+</div>
+
+<app-add-post></app-add-post>
