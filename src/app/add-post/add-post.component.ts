@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2/database';
 import { ForumService } from '../post.service';
 import { ForumPost } from '../post.model';
 

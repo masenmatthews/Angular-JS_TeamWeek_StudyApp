@@ -40,7 +40,7 @@ export const appRoutes: Routes = [
 
   // {
   //   path: '',
-  //   component: Component
+  //   component: CommentComponent
   // }
  ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

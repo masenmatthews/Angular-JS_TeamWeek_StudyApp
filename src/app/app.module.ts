@@ -25,6 +25,8 @@ import { appRoutes } from './app.routing';
 import { AuthService } from './auth.service';
 import { MzButtonModule, MzInputModule, MzSelectModule } from 'ng2-materialize';
 import { ChatComponent } from './chat/chat.component';
+// import { CommentComponent } from './comment/comment.component';
+
 
 //Configure firebase
 export const firebaseConfig = {

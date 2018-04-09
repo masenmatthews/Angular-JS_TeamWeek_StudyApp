@@ -1,9 +1,20 @@
 <h1>Title: {{(postDetail | async)?.title}}</h1>
-
 <br>
-
 <h1>username: {{(postDetail | async)?.owner}} </h1>
-
 <br>
 <h1> Description <h1>
 <h2>{{(postDetail | async)?.description}}</h2>
+
+<button (click)="toggleDisplay()" type="button" name="button" class="btn">Add comment:</button>
+
+<div *ngIf="toggle">
+	<div class="container">
+  <h2>Add a comment:</h2>
+  <form>
+    <label for="comment">Comment: </label>
+      <input type="text" name="comment" placeholder='comment' #title>
+        <button  class="btn btn-info" name="Add Comment"(click)="addPost(comment.value); comment.value = '';">Submit</button>
+        <button type="button" class="btn btn-danger ml-2" name="Close" (click)="toggleDisplay()">Cancel</button>
+  </form>
+  </div>
+</div>
