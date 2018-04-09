@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <div class="col s12 md6">
+        <div class="card">
+          <div class="card-content blue-grey white-text">
+            <span class="card-title white-text ">Create New Account</span>
+          </div>
+          <div class="card-content blue-grey darken-2">
+            <div class="row m-valign-wrapper">
+              <mz-input-container class="col s12 m6">
+                <input #newUserName class="white-text" mz-input
+                  [label]="'User Name'"
+                  id="userNameInput"
+                  placeholder="Choose a unique username"
+                  type="text">
+              </mz-input-container>
+              <mz-input-container class="col s12 m6">
+                <input #newEmail class="white-text"mz-input
+                  [label]="'Email'"
+                  id="emailInput"
+                  placeholder="Enter Email"
+                  type="text">
+              </mz-input-container>
+              <mz-input-container class="col s12 m6">
+                <input #newPassword class="white-text" mz-input
+                  [label]="'Password'"
+                  id="passwordInput"
+                  placeholder="Enter Password"
+                  type="text">
+              </mz-input-container>
+              <button (click)="createAccount(newUserName.value, newEmail.value, newPassword.value)" class="btn">Add Account</button>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>

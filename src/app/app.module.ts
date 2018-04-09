@@ -31,23 +31,23 @@ export const firebaseConfig = {
   databaseURL: firebaseApiKey.databaseURL,
   storageBucket: firebaseApiKey.storageBucket
 }
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    AddPostComponent,
-    PostDetailComponent,
-    PostListComponent,
-    WelcomeComponent
+    NewForumPostComponent,
+    ChatComponent,
+    CreateUserComponent,
+
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
-    routing,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    NoopAnimationsModule,
+    MzButtonModule,
+    MzInputModule,
+    MzSelectModule,
+    RouterModule.forRoot(appRoutes),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
