@@ -23,26 +23,43 @@
   </nav>
 
 <router-outlet></router-outlet>
-<div class="section">
-  <div class="row m-valign-wrapper">
-    <div class="col s12 m3">
-      <mz-modal #basicModal>
-        <mz-modal-header>
-          <h4>Modal Title</h4>
-        </mz-modal-header>
-        <mz-modal-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </mz-modal-content>
-        <mz-modal-footer>
-          <button mz-button [flat]="true" mz-modal-close>Disagree</button>
-          <button mz-button [flat]="true" mz-modal-close>Agree</button>
-        </mz-modal-footer>
-      </mz-modal>
+<a class="btn-floating btn-large black" id="btn-sidenav-demo">Menu</a>
+
+<mz-sidenav #sidenav
+  [id]="'sidenav-demo'"
+  [collapseButtonId]="'btn-sidenav-demo'"
+  [edge]="'right'">
+
+  <mz-sidenav-header>
+    <div class="user-view">
+      <img class="circle avatar" src="assets/sidenav-demo-avatar.png">
+      <div class="black-text name">User Name</div>
+      <div class="black-text email">userEmail@email.com</div>
     </div>
-  </div>
-</div>
-<footer class="footer black">
-  <div class="container">
-    <a class="white-text" (click)="basicModal.open()">Messages</a>
-  </div>
-</footer>
+  </mz-sidenav-header>
+
+  <mz-sidenav-subheader>Links</mz-sidenav-subheader>
+
+  <mz-sidenav-link>
+    <a>First Link</a>
+  </mz-sidenav-link>
+
+  <mz-sidenav-link [active]="true">
+    <a>Active Link</a>
+  </mz-sidenav-link>
+
+  <mz-sidenav-link>
+    <a class="waves-effect">Second Link With Waves</a>
+  </mz-sidenav-link>
+
+  <mz-sidenav-divider></mz-sidenav-divider>
+
+  <mz-sidenav-link>
+    <a><i mz-icon-mdi [icon]="'cloud'"></i>Third Link With Icon</a>
+  </mz-sidenav-link>
+
+  <mz-sidenav-link>
+    <a mz-icon-mdi [icon]="'earth'">Fourth Link With Icon</a>
+  </mz-sidenav-link>
+
+  <mz-sidenav-divider></mz-sidenav-divider>
