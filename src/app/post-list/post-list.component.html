@@ -1,19 +1,29 @@
-<h1>Forum: </h1>
-
 <div class="container">
-  <div *ngFor="let post of posts | async">
-      <h1><strong>Title: </strong> {{post.title}}</h1>
-      <div class="card-body bg-light">
-<br>
-        <h2>username: <strong>{{post.owner}}</strong></h2>
-<br>
-        <!-- <h2>Summery: <strong>{{post.body}}</strong></h2> -->
-<br>
-        <app-remove-post [postKey]="post"></app-remove-post>
+  <div class="row">
+    <div class="col s12 m6">
+      <div *ngFor="let post of posts | async">
+      <div class="card">
+        <span class="card-title"><h1>Forum: </h1></span>
 
-        <button type="button" class="btn btn-success" name="button" (click)="details(post)">More Details</button>
+          <div class="card-content">
+            <h1><strong>Title: </strong> {{post.title}}</h1>
+            <div class="card-body bg-light">
+      <br>
+              <h2>username: <strong>{{post.owner}}</strong></h2>
+      <br>
+              <!-- <h2>Summery: <strong>{{post.body}}</strong></h2> -->
+      <br>
+              <app-remove-post [postKey]="post"></app-remove-post>
+
+              <button type="button" class="btn btn-success" name="button" (click)="details(post)">More Details</button>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </div>
   </div>
-</div>
+
 
 <app-add-post></app-add-post>
+</div>
