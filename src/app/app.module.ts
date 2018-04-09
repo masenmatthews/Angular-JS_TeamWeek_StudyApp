@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { appRoutes } from './app.routing';
 import { AuthService } from './auth.service';
-import { MzButtonModule, MzInputModule, MzSelectModule, MzModalModule } from 'ng2-materialize';
+import { MzCardModule, MzSidenavModule, MzCollapsibleModule, MzIconModule, MzIconMdiModule, MzButtonModule, MzDropdownModule, MzInputModule, MzSelectModule, MzModalModule, MzParallaxModule } from 'ng2-materialize';
 import { ChatComponent } from './chat/chat.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
@@ -58,7 +58,14 @@ export const firebaseConfig = {
     NoopAnimationsModule,
     MzButtonModule,
     MzInputModule,
+    MzParallaxModule,
+    MzCardModule,
+    MzIconModule,
+    MzSidenavModule,
+    MzIconMdiModule,
+    MzCollapsibleModule,
     MzSelectModule,
+    MzDropdownModule,
     MzModalModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),

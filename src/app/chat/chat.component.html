@@ -1,7 +1,31 @@
-<div class="container">
+<!-- <div class="container">
   <ul class="collection">
         <div *ngFor="let user of users">
           <a href="#!" class="collection-item">{{user.displayName}}</a>
         </div>
       </ul>
+</div>
+<div class="section">
+
+  <p>
+    Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.
+  </p>
+</div> -->
+<div class="container">
+<div class="section">
+<h5 class="dark">Users</h5>
+<div class="row">
+  <div class="col s12 m6 l6">
+    <a mz-button id="btn-dropdown-basic" href="javascript:void(0)">Dropdown</a>
+    <mz-dropdown
+      [id]="'dropdown-basic'"
+      [dropdownButtonId]="'btn-dropdown-basic'"
+    >
+    <div *ngFor="let user of users">
+      <mz-dropdown-item><div class="row m-valign-wrapper">
+      </div>{{user.displayName}}</mz-dropdown-item>
+    </div>
+    </mz-dropdown>
+  </div>
+</div>
 </div>
