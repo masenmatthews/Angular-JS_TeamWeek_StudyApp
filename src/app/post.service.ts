@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
-import { ForumPost } from './forum.model';
+import { ForumPost } from './post.model';
 
 
 @Injectable()
@@ -14,7 +14,7 @@ export class ForumService {
   }
 
   getPosts() {
-  return this.games;
+  return this.posts;
   }
 
   addPost(newPost: ForumPost) {

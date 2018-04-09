@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
+
+import { ForumService } from '../post.service';
+
 
 @Component({
   selector: 'app-post-list',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListComponent implements OnInit {
 
-  constructor() { }
+    posts: FirebaseListObservable<any[]>;
+    currentRoute: string = this.route.url;
 
-  ngOnInit() {
+    constructor(private forumService: ForumService, private route: Router) { }
+
+    ngOnInit() {
+      this.posts = this.forumService.getPosts();
+    }
+
+    details(post) {
+      this.route.navigate(['posts', post.$key]);
+    }
+
   }
-
-}
