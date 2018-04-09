@@ -21,7 +21,7 @@ export class ForumService {
     this.posts.push(newPost);
   }
 
-  getPostById(postId: string) {
+  getPostByKey(postId: string) {
   return this.database.object('posts/' + postId);
   }
 
