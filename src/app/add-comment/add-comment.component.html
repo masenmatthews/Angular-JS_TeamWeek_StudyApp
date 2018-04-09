@@ -4,9 +4,9 @@
 	<div class="container">
   <h2>Add a comment:</h2>
   <form>
-    <label for="comment">Comment: </label>
-      <input type="text" name="comment" placeholder='comment' #com>
-        <button  class="btn btn-info" name="Add Comment"(click)="addComment(com.value); com.value = '';">Submit</button>
+    <label for="com">Comment: </label>
+      <input type="text" name="com" placeholder='comment' #com>
+        <button type="button" class="btn btn-info" name="Add Comment"(click)="addComment(com.value); com.value = '';">Submit</button>
         <button type="button" class="btn btn-danger ml-2" name="Close" (click)="toggleDisplay()">Cancel</button>
   </form>
   </div>
