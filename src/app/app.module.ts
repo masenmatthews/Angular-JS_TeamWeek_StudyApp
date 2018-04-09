@@ -16,6 +16,9 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { RemovePostComponent } from './remove-post/remove-post.component';
 //key
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { firebaseApiKey } from './api-keys';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +26,7 @@ import { RouterModule } from '@angular/router';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { appRoutes } from './app.routing';
 import { AuthService } from './auth.service';
-import { MzButtonModule, MzInputModule, MzSelectModule } from 'ng2-materialize';
+import { MzButtonModule, MzInputModule, MzSelectModule, MzModalModule } from 'ng2-materialize';
 import { ChatComponent } from './chat/chat.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
@@ -56,10 +59,12 @@ export const firebaseConfig = {
     MzButtonModule,
     MzInputModule,
     MzSelectModule,
+    MzModalModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

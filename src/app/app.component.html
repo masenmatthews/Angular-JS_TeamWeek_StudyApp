@@ -1,9 +1,48 @@
-<div class="topnav black animation">
-  <div id="title">
-     <h1>{{title}}</h1>
-  </div>
-    <a routerLink="">Home</a>
-    <a routerLink="posts">Forum</a>
-</div>
+<nav class="nav-extended black">
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a class="navLink" routerLink="/">Home</a></li>
+        <li class="tab"><a class="navLink" routerLink="/posts">Forum</a></li>
+        <li class="tab"><a class="navLink" routerLink="/createUser">Create Account</a></li>
+        <li class="tab"><a class="navLink" routerLink="/chat">Chat</a></li>
+
+        <div *ngIf="LoggedOut">
+            <li class="tab">
+              <a class="navLinkLog" (click)="login()">Login</a>
+            </li>
+          </div>
+          <div *ngIf="LoggedIn">
+              <li class="tab logout">
+                  <a id="logout" (click)="logout()">Logout</a>
+              </li>
+              <li class="tab"> <a id="admin" routerLink="/admin">Admin</a>
+              </li>
+              </div>
+      </ul>
+    </div>
+  </nav>
 
 <router-outlet></router-outlet>
+<div class="section">
+  <div class="row m-valign-wrapper">
+    <div class="col s12 m3">
+      <mz-modal #basicModal>
+        <mz-modal-header>
+          <h4>Modal Title</h4>
+        </mz-modal-header>
+        <mz-modal-content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </mz-modal-content>
+        <mz-modal-footer>
+          <button mz-button [flat]="true" mz-modal-close>Disagree</button>
+          <button mz-button [flat]="true" mz-modal-close>Agree</button>
+        </mz-modal-footer>
+      </mz-modal>
+    </div>
+  </div>
+</div>
+<footer class="footer black">
+  <div class="container">
+    <a class="white-text" (click)="basicModal.open()">Messages</a>
+  </div>
+</footer>

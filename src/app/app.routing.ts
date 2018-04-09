@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateUserComponent } from './create-user/create-user.component'
 // Welcome
 // import { WelcomeComponent } from './welcome/welcome.component';
-
+import { ChatComponent } from './chat/chat.component';
 
 //forum
 import { PostDetailComponent } from './post-detail/post-detail.component';
@@ -36,6 +36,10 @@ export const appRoutes: Routes = [
     path: 'createUser',
     component: CreateUserComponent
 
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   }
 
   // {
