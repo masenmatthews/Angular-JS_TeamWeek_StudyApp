@@ -14,6 +14,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { RemovePostComponent } from './remove-post/remove-post.component';
 //key
 import { firebaseApiKey } from './api-keys';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -40,8 +41,8 @@ export const firebaseConfig = {
     CreateUserComponent,
     WelcomeComponent,
     PostListComponent,
-    AddPostComponent
-
+    AddPostComponent,
+    RemovePostComponent
   ],
   imports: [
     BrowserModule,
