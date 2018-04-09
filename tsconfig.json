@@ -14,8 +14,8 @@
     "module": "es2015",
     "baseUrl": "",
     "types": [
-+      "jquery",
-+      "materialize-css"
+      "jquery",
+      "materialize-css"
     ]
   },
   "exclude": [
