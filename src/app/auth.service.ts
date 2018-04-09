@@ -22,7 +22,7 @@ export class AuthService {
     )
   }
   login(email, password) {
-    firebase.auth().signInWithEmailAndPassword(email, password)
+    firebase.auth().signInWithEmailAndPassword(email, password);
     }
 
     createUser(user: User) {
