@@ -1,0 +1,11 @@
+<h1>Comments: </h1>
+
+<div class="container">
+  <div *ngFor="let comment of comments | async">
+      <h1><strong>Comment: </strong> {{comment.com}}</h1>
+      <!-- <div class="card-body bg-light">
+        <app-remove-post [postKey]="post"></app-remove-post>
+      </div> -->
+  </div>
+</div>
+<!-- <app-add-comment></app-add-comment> -->

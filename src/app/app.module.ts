@@ -25,7 +25,9 @@ import { appRoutes } from './app.routing';
 import { AuthService } from './auth.service';
 import { MzButtonModule, MzInputModule, MzSelectModule } from 'ng2-materialize';
 import { ChatComponent } from './chat/chat.component';
-// import { CommentComponent } from './comment/comment.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
+
 
 
 //Configure firebase
@@ -44,7 +46,9 @@ export const firebaseConfig = {
     WelcomeComponent,
     PostListComponent,
     AddPostComponent,
-    RemovePostComponent
+    RemovePostComponent,
+    AddCommentComponent,
+    CommentListComponent
   ],
   imports: [
     BrowserModule,
