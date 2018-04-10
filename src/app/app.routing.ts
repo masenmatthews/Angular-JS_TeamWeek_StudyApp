@@ -3,7 +3,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateUserComponent } from './create-user/create-user.component'
 // Welcome
-// import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 import { ChatComponent } from './chat/chat.component';
 import { ChatDetailComponent } from './chat-detail/chat-detail.component'
 
@@ -17,10 +17,10 @@ import { AuthGuardService } from './auth-guard.service'
 // import { AdminComponent } from './admin/admin.component';
 
 export const appRoutes: Routes = [
-  // {
-  //    path: '',
-  //    component: WelcomeComponent
-  //  },
+  {
+     path: '',
+     component: WelcomeComponent
+   },
   {
     path: 'posts',
     component: PostListComponent
