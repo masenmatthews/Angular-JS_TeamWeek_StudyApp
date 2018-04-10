@@ -1,29 +1,22 @@
-<!-- <div class="container">
-  <ul class="collection">
-        <div *ngFor="let user of users">
-          <a href="#!" class="collection-item">{{user.displayName}}</a>
-        </div>
-      </ul>
-</div>
-<div class="section">
-
-  <p>
-    Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.
-  </p>
-</div> -->
 <div class="container">
-<div class="section">
-<div class="row">
-  <div class="col s12 m6 l6">
-    <a mz-button id="btn-dropdown-basic" href="javascript:void(0)">Users</a>
-    <mz-dropdown
-      [id]="'dropdown'"
-      [dropdownButtonId]="'btn-dropdown-basic'"
-    >
-    <div *ngFor="let user of users">
-      <li>{{user.displayName}}</li>
+  <div class="section">
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <a mz-button id="btn-dropdown-basic" class="btn blue-grey lighten-1" href="javascript:void(0)">Users</a>
+        <mz-dropdown [id]="'dropdown'" [dropdownButtonId]="'btn-dropdown-basic'">
+          <div *ngFor="let user of users">
+            <li (click)='startChat(user)'>{{user.displayName}}</li>
+          </div>
+        </mz-dropdown>
+      </div>
     </div>
-    </mz-dropdown>
   </div>
-</div>
+  <div *ngFor='let chat of chats | async'>
+    <h1>{{chat.name}}</h1>
+    <h4>{{chat.messageArray[0].body}}</h4>
+    <div *ngFor='let user of chat.userArray'> 
+      {{user}}
+    </div>
+    <button (click)="reply()" class="btn blue-grey lighten-1">Reply</button>
+  </div>
 </div>

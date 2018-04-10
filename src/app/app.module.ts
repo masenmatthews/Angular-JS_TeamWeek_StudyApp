@@ -18,7 +18,7 @@ import { RemovePostComponent } from './remove-post/remove-post.component';
 //key
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AuthGuardService } from './auth-guard.service';
 import { firebaseApiKey } from './api-keys';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,7 +30,8 @@ import { MzCardModule, MzSidenavModule, MzCollapsibleModule, MzIconModule, MzIco
 import { ChatComponent } from './chat/chat.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
-
+import { UserService } from './user.service';
+import { ChatDetailComponent } from './chat-detail/chat-detail.component';
 
 
 //Configure firebase
@@ -51,7 +52,8 @@ export const firebaseConfig = {
     AddPostComponent,
     RemovePostComponent,
     AddCommentComponent,
-    CommentListComponent
+    CommentListComponent,
+    ChatDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [UserService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 

@@ -1,34 +1,38 @@
 <nav class="nav-extended black">
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a class="navLink" routerLink="/">Home</a></li>
-        <li class="tab"><a class="navLink" routerLink="/posts">Forum</a></li>
-        <li class="tab"><a class="navLink" routerLink="/createUser">Create Account</a></li>
-        <li class="tab"><a class="navLink" routerLink="/chat">Chat</a></li>
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab">
+        <a class="navLink" routerLink="/">Home</a>
+      </li>
+      <li class="tab">
+        <a class="navLink" routerLink="/posts">Forum</a>
+      </li>
+      <li class="tab">
+        <a class="navLink" routerLink="/createUser">Create Account</a>
+      </li>
+      <li class="tab">
+        <a class="navLink" routerLink="/chat">Chat</a>
+      </li>
 
-        <div *ngIf="LoggedOut">
-            <li class="tab">
-              <a class="navLinkLog" (click)="login()">Login</a>
-            </li>
-          </div>
-          <div *ngIf="LoggedIn">
-              <li class="tab logout">
-                  <a id="logout" (click)="logout()">Logout</a>
-              </li>
-              <li class="tab"> <a id="admin" routerLink="/admin">Admin</a>
-              </li>
-              </div>
-      </ul>
-    </div>
-  </nav>
+      <div *ngIf="LoggedOut">
+        <li class="tab">
+          <a class="navLinkLog" (click)="login()">Login</a>
+        </li>
+      </div>
+      <li class="tab logout">
+        <a id="logout" (click)="logout()">Logout</a>
+      </li>
+      <li class="tab">
+        <a id="admin" routerLink="/admin">Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <router-outlet></router-outlet>
 <a class="btn-floating btn-large right" id="btn-sidenav-demo">Menu</a>
 
-<mz-sidenav #sidenav
-  [id]="'sidenav-demo'"
-  [collapseButtonId]="'btn-sidenav-demo'"
-  [edge]="'right'">
+<mz-sidenav #sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" [edge]="'right'">
 
   <mz-sidenav-header>
     <div class="user-view">
@@ -55,7 +59,8 @@
   <mz-sidenav-divider></mz-sidenav-divider>
 
   <mz-sidenav-link>
-    <a><i mz-icon-mdi [icon]="'cloud'"></i>Third Link With Icon</a>
+    <a>
+      <i mz-icon-mdi [icon]="'cloud'"></i>Third Link With Icon</a>
   </mz-sidenav-link>
 
   <mz-sidenav-link>

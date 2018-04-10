@@ -11,7 +11,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 
 
-
+import { AuthGuardService } from './auth-guard.service'
 //Admin
 // import { AdminComponent } from './admin/admin.component';
 
@@ -27,6 +27,7 @@ export const appRoutes: Routes = [
   // {
   //   path: 'admin',
   //   component: AdminComponent
+      //  canActivate: [AuthGuardService]
   // },
   {
     path: 'posts/:id',
@@ -39,7 +40,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'chat',
-    component: ChatComponent
+    component: ChatComponent,
+    canActivate: [AuthGuardService]
   }
 
   // {
