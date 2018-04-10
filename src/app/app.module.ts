@@ -33,7 +33,6 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { UserService } from './user.service';
 import { ChatDetailComponent } from './chat-detail/chat-detail.component';
 
-
 //Configure firebase
 export const firebaseConfig = {
   apiKey: firebaseApiKey.apiKey,

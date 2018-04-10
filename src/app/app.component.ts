@@ -21,10 +21,10 @@ export class AppComponent implements OnInit {
 
   users;
   constructor(private create: CreateUserComponent, private authService: AuthService, private router: Router, private userService: UserService) {
-    
+
   }
 
-  
+
 
   ngOnInit() {
     this.loggedIn = this.create.loggingIn;
