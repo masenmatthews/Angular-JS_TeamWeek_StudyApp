@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ForumService } from '../post.service';
 import { ForumPost } from '../post.model';
+import { UserComment } from '../comment.model';
 
 @Component({
   selector: 'app-add-post',
@@ -25,7 +26,8 @@ export class AddPostComponent implements OnInit {
 
     addPost(title: string, owner: string, body: string) {
       const newPost: ForumPost = new ForumPost(title, owner, body);
-
+      const newComment: UserComment = new UserComment("");
+      newPost.comments = [newComment];
       this.forumService.addPost(newPost);
       this.toggleDisplay();
     }

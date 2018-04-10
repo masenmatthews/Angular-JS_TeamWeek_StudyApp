@@ -9,7 +9,7 @@ export class CommentService {
   comments: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.comments = database.list('comments');
+    this.comments = database.list('posts');
   }
 
   getComments() {

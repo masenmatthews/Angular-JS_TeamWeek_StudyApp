@@ -32,6 +32,10 @@ export class ForumService {
     this.database.object(`/posts/${postId}`).remove();
   }
 
+  updateComments(updatedPost) {
+  let postEntryInFirebase = this.getPostByKey(updatedPost.$key);
+  postEntryInFirebase.update({comments: updatedPost.comments,})
 
+}
 
 }

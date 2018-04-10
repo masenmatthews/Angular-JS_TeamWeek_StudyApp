@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ForumService } from '../post.service';
+import { UserComment } from '../comment.model';
 
 @Component({
   selector: 'app-post-detail',
@@ -21,7 +22,16 @@ export class PostDetailComponent implements OnInit {
       this.route.params.forEach((urlParameters)=> {
         this.postKey = urlParameters['id'];
       });
-      this.postDetail = this.forumService.getPostByKey(this.postKey);
+      this.forumService.getPostByKey(this.postKey).subscribe(dataLastEmittedFromObserver => {
+     this.postDetail = dataLastEmittedFromObserver;);
+    }
+
+    addComment(com: string) {
+      const newComment: UserComment = new UserComment(com);
+      console.log(this.postDetail.comments)
+      this.postDetail.comments.push(newComment);
+      this.forumService.updateComments(this.postDetail);
+      // this.toggleDisplay();
     }
 
   }
