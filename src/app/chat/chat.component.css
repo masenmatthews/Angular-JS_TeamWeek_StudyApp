@@ -2,3 +2,7 @@ li {
   padding-left: 10px;
   padding-top: 5px;
 }
+#title {
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.685);
+}

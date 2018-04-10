@@ -1,14 +1,14 @@
+<div class="container">
 <button (click)="toggleDisplay()" type="button" name="button" class="btn">Add Post</button>
 
 <div *ngIf="toggle">
-	<div class="container">
-  <h1>Add Post</h1>
+  <h1 id="title">Add Post</h1>
   <form>
-    <label for="Title">Title: </label>
+    <label id="title" for="Title">Title: </label>
       <input type="text" name="Title" placeholder='Title' #title>
-    <label for="Owner">User: </label>
+    <label id="title" for="Owner">User: </label>
       <input type="text"  name="Owner" placeholder='Username' #owner>
-    <label for="body">Description : </label>
+    <label id="title" for="body">Description : </label>
         <input type="text" id="desc" name="body" placeholder='' #body>
         <button  class="btn btn-info" name="Add Post"(click)="addPost(owner.value,title.value,body.value); owner.value = ''; title.value = ''; body.value = '';">Submit</button>
         <button type="button" class="btn btn-danger ml-2" name="Close" (click)="toggleDisplay()">Cancel</button>

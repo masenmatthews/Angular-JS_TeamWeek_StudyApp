@@ -17,6 +17,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { RemovePostComponent } from './remove-post/remove-post.component';
 //key
 
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthGuardService } from './auth-guard.service';
 import { firebaseApiKey } from './api-keys';
@@ -26,7 +27,7 @@ import { RouterModule } from '@angular/router';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { appRoutes } from './app.routing';
 import { AuthService } from './auth.service';
-import { MzCardModule, MzSidenavModule, MzCollapsibleModule, MzIconModule, MzIconMdiModule, MzButtonModule, MzDropdownModule, MzInputModule, MzSelectModule, MzModalModule, MzParallaxModule } from 'ng2-materialize';
+import { MzCardModule, MzTextareaModule, MzSidenavModule, MzCollapsibleModule, MzIconModule, MzIconMdiModule, MzButtonModule, MzDropdownModule, MzInputModule, MzSelectModule, MzModalModule, MzParallaxModule } from 'ng2-materialize';
 import { ChatComponent } from './chat/chat.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
@@ -66,6 +67,7 @@ export const firebaseConfig = {
     MzSidenavModule,
     MzIconMdiModule,
     MzCollapsibleModule,
+    MzTextareaModule,
     MzSelectModule,
     MzDropdownModule,
     MzModalModule,

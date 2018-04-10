@@ -12,11 +12,13 @@
     </div>
   </div>
   <div *ngFor='let chat of chats | async'>
-    <h1>{{chat.name}}</h1>
-    <h4>{{chat.messageArray[0].body}}</h4>
+    <h1 id="title">{{chat.name}}</h1>
+    <h4 id="title">{{chat.messageArray[0].body}}</h4>
     <div *ngFor='let user of chat.userArray'> 
-      {{user}}
+      <h5 id="title">{{user}}</h5>
     </div>
-    <button (click)="reply()" class="btn blue-grey lighten-1">Reply</button>
+    <button (click)="reply(chat)" class="btn blue-grey lighten-1">Reply</button>
   </div>
 </div>
+
+  

@@ -33,9 +33,9 @@ export class ForumService {
   }
 
   updateComments(updatedPost) {
-  let postEntryInFirebase = this.getPostByKey(updatedPost.$key);
-  postEntryInFirebase.update({comments: updatedPost.comments,})
+    let postEntryInFirebase = this.getPostByKey(updatedPost.$key);
+    postEntryInFirebase.update({ comments: updatedPost.comments, })
 
-}
+  }
 
 }

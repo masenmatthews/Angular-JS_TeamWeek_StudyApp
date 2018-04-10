@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { AuthService } from '../auth.service';
 import { ChatService } from '../chat.service';
+import { Router } from '@angular/router'
 import { Message } from '../models/message.model';
 import { Chat } from '../models/chat.model';
 
@@ -17,13 +18,12 @@ export class ChatComponent implements OnInit {
   users;
   chats;
   public currentUser = this.authService.userDetails;
-  constructor(private userService: UserService, private authService: AuthService, private chatService: ChatService) { }
+  constructor(private router: Router, private userService: UserService, private authService: AuthService, private chatService: ChatService) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
       this.userDisplay = dataLastEmittedFromObserver;
       this.users = this.userDisplay;
-      console.log(this.currentUser)
     })
     this.chats = this.chatService.getChats()
   }
@@ -44,9 +44,9 @@ export class ChatComponent implements OnInit {
     newChat.messageArray = [defaultMessage];
     newChat.userArray = [this.currentUser.email, user.email]
     this.chatService.addChat(newChat);
-    console.log(newChat.messageArray[0].body)
   }
 
-
-
+  reply(chat) {
+    this.router.navigate(['chat', chat.$key])
+  }
 }
