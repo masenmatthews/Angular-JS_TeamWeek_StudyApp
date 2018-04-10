@@ -9,11 +9,10 @@
 }
 
 html, body {
-  color: white;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.685);
   background: url(https://picsum.photos/1000/1000/?random) no-repeat center center fixed; 
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+

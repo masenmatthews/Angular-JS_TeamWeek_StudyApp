@@ -27,7 +27,6 @@ export class AuthService {
       let errorMessage = error.message;
       alert(errorMessage);
     });
-    console.log(this.userDetails.email);
     }
 
     createUser(email, password) {

@@ -18,11 +18,12 @@
                     <input type="text" name="com" placeholder='comment' #com>
                       <button type="button" class="btn btn-info" name="Add Comment"(click)="addComment(com.value); com.value = '';">Submit</button>
 
-                </form>
-                </div>
+              </form>
+            </div>
 
               <div class="container">
                 <div *ngFor="let comment of postDetail?.comments">
                     <h5>{{comment.com}}</h5>
                 </div>
               </div>
+            </div>

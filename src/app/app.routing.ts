@@ -5,6 +5,7 @@ import { CreateUserComponent } from './create-user/create-user.component'
 // Welcome
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ChatComponent } from './chat/chat.component';
+import { ChatDetailComponent } from './chat-detail/chat-detail.component'
 
 //forum
 import { PostDetailComponent } from './post-detail/post-detail.component';
@@ -41,6 +42,11 @@ export const appRoutes: Routes = [
   {
     path: 'chat',
     component: ChatComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'chat/:id',
+    component: ChatDetailComponent,
     canActivate: [AuthGuardService]
   }
 

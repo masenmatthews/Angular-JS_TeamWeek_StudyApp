@@ -28,12 +28,12 @@
 <router-outlet></router-outlet>
 <!-- SideBar -->
 <a class="btn-floating btn-large right" id="btn-sidenav-demo" (click)='findInfo()'>Menu</a>
-<mz-sidenav #sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" [edge]="'right'">
+<mz-sidenav  #sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" [edge]="'right'">
   <mz-sidenav-header>
     <div class="user-view">
       <img class="circle avatar" src="https://picsum.photos/200/300/?random">
-      <div class="black-text email">{{userInfo?.email}}</div>
-      <div class="black-text email">{{userInfo?.displayName}}</div>
+      <div id="noShadow" class="black-text email noShadow">{{userInfo?.email}}</div>
+      <div class="black-text email noShadow">{{userInfo?.displayName}}</div>
     </div>
   </mz-sidenav-header>
   <mz-sidenav-subheader>Links</mz-sidenav-subheader>

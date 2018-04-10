@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
   findInfo(){
     this.currentUser = this.authService.userDetails.email
     this.userInfo = this.userService.getUserByEmail(this.currentUser)
-    console.log(this.currentUser)
+
   }
 
   testButton() {

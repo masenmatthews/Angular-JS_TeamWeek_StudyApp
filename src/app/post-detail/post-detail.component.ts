@@ -28,7 +28,6 @@ export class PostDetailComponent implements OnInit {
 
     addComment(com: string) {
       const newComment: UserComment = new UserComment(com);
-      console.log(this.postDetail.comments)
       this.postDetail.comments.push(newComment);
       this.forumService.updateComments(this.postDetail);
       // this.toggleDisplay();
