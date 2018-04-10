@@ -18,4 +18,15 @@ export class UserService {
     this.users.push(newUser)
   }
 
+  getUserByEmail(email: string) {
+    let userList;
+    this.users.subscribe(dataLastEmittedFromObserver => {
+      userList = dataLastEmittedFromObserver;
+    })
+    for (let i = 0; i < userList.length; i++) {
+      if(userList[i].email === email){
+        return userList[i];
+      }
+    }
+  }
 }

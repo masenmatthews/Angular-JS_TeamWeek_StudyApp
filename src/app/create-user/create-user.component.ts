@@ -47,6 +47,8 @@ export class CreateUserComponent implements OnInit {
     }
 
     logIn(email, password) {
+      this.loggingIn = true;
       this.authService.login(email, password);
+      this.loginRedirect();
     }
 }

@@ -75,7 +75,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     BrowserAnimationsModule
   ],
-  providers: [UserService, AuthService, AuthGuardService],
+  providers: [UserService, AuthService, AuthGuardService, UserService],
   bootstrap: [AppComponent]
 })
 

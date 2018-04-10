@@ -1,3 +1,4 @@
+<!-- NavBar -->
 <nav class="nav-extended black">
   <div class="nav-content">
     <ul class="tabs tabs-transparent">
@@ -8,15 +9,11 @@
         <a class="navLink" routerLink="/posts">Forum</a>
       </li>
       <li class="tab">
-        <a class="navLink" routerLink="/createUser">Create Account</a>
-      </li>
-      <li class="tab">
         <a class="navLink" routerLink="/chat">Chat</a>
       </li>
-
-      <div *ngIf="LoggedOut">
+      <div *ngIf="loggedOut">
         <li class="tab">
-          <a class="navLinkLog" (click)="login()">Login</a>
+          <a class="navLinkLog" routerLink="/createUser">Login</a>
         </li>
       </div>
       <li class="tab logout">
@@ -28,43 +25,33 @@
     </ul>
   </div>
 </nav>
-
 <router-outlet></router-outlet>
-<a class="btn-floating btn-large right" id="btn-sidenav-demo">Menu</a>
-
+<!-- SideBar -->
+<a class="btn-floating btn-large right" id="btn-sidenav-demo" (click)='findInfo()'>Menu</a>
 <mz-sidenav #sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" [edge]="'right'">
-
   <mz-sidenav-header>
     <div class="user-view">
-      <img class="circle avatar" src="assets/sidenav-demo-avatar.png">
-      <div class="black-text name">User Name</div>
-      <div class="black-text email">userEmail@email.com</div>
+      <img class="circle avatar" src="https://picsum.photos/200/300/?random">
+      <div class="black-text email">{{userInfo?.email}}</div>
+      <div class="black-text email">{{userInfo?.displayName}}</div>
     </div>
   </mz-sidenav-header>
-
   <mz-sidenav-subheader>Links</mz-sidenav-subheader>
-
   <mz-sidenav-link>
     <a>First Link</a>
   </mz-sidenav-link>
-
   <mz-sidenav-link [active]="true">
     <a>Active Link</a>
   </mz-sidenav-link>
-
   <mz-sidenav-link>
     <a class="waves-effect">Second Link With Waves</a>
   </mz-sidenav-link>
-
   <mz-sidenav-divider></mz-sidenav-divider>
-
   <mz-sidenav-link>
     <a>
       <i mz-icon-mdi [icon]="'cloud'"></i>Third Link With Icon</a>
   </mz-sidenav-link>
-
   <mz-sidenav-link>
     <a mz-icon-mdi [icon]="'earth'">Fourth Link With Icon</a>
   </mz-sidenav-link>
-
   <mz-sidenav-divider></mz-sidenav-divider>
