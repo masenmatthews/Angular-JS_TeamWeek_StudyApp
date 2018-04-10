@@ -1,44 +1,31 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="z-depth-4 col s12 md6">
       <span class="card-title white-text">
         <h2>{{chatToDisplay?.name}}</h2>
       </span>
     </div>
-    <div class="card-content white-text blue-grey darken-2">
-      <div class="row">
-        <div class="col s12 m6">
-          <div *ngFor="let message of chatToDisplay?.messageArray">
-            <div id="right">
-              <div *ngIf="checkForSender(message.sender)">
-                <h3 id="right">{{message.body}}</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-      <div class="z-depth-4 col s12 md6">
-        <span class="card-title white-text">
-          <h2>{{chatToDisplay?.name}}</h2>
-        </span>
-      </div>
+    <div class="card">
       <div class="card-content white-text blue-grey darken-2">
         <div class="row">
           <div class="col s12 m6">
             <div *ngFor="let message of chatToDisplay?.messageArray">
-              <div id="right">
-                <div *ngIf="!checkForSender(message.sender)">
-                  <h3 id="left">{{message.body}}</h3>
-                </div>
+
+              <div *ngIf="checkForSender(message.sender)">
+                <h3 id="right">{{message.body}}</h3>
               </div>
+
+              <div *ngIf="!checkForSender(message.sender)">
+                <h3 id="left">{{message.body}}</h3>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
+
+  </div>
   <div class="row">
     <div class="z-depth-4 col s12 md6">
       <div class="card">
@@ -57,6 +44,40 @@
               <div class="input-field col s12">
                 <button (click)="reply(newReply.value)" class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Reply</button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div *ngFor="let message of chatToDisplay?.messageArray">
+  <div *ngIf="checkForSender(message.sender)">
+    <h3 class="right-align title">{{message.body}}</h3>
+  </div>
+  <div *ngIf="!checkForSender(message.sender)">
+    <h3 class="left-align title">{{message.body}}</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="z-depth-4 col s12 md6">
+    <div class="card">
+      <div class="card-content blue-grey white-text">
+        <span class="card-title white-text">
+          Reply
+        </span>
+      </div>
+      <div class="card-content blue-grey darken-2">
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field col s12">
+              <input #newReply type="text" class="validate white-text" required="" aria-required="true">
+              <label for="reply">Reply</label>
+            </div>
+            <div class="input-field col s12">
+              <button (click)="reply(newReply.value); newReply.value='';" class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Reply</button>
             </div>
           </div>
         </div>

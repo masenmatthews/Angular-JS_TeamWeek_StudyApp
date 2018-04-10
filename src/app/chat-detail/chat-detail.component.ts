@@ -29,8 +29,8 @@ export class ChatDetailComponent implements OnInit {
     this.currentUser = this.authService.userDetails.email;
   }
 
-  checkForSender(message) {
-    if (this.currentUser === message.sender) {
+  checkForSender(sender) {
+    if (this.currentUser === sender) {
       return true;
     } else {
       return false;

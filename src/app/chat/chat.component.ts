@@ -25,7 +25,9 @@ export class ChatComponent implements OnInit {
       this.userDisplay = dataLastEmittedFromObserver;
       this.users = this.userDisplay;
     })
-    this.chats = this.chatService.getChats()
+    this.chatService.getChats().subscribe(dataLastEmittedFromObserver => {
+      this.chats = dataLastEmittedFromObserver;
+    });
   }
 
   checkEmail(recipient) {

@@ -5,11 +5,11 @@
   <h1 id="title">Add Post</h1>
   <form>
     <label id="title" for="Title">Title: </label>
-      <input type="text" name="Title" placeholder='Title' #title>
+      <input class="white-text" type="text" name="Title" placeholder='Title' #title>
     <label id="title" for="Owner">User: </label>
-      <input type="text"  name="Owner" placeholder='Username' #owner>
+      <input class="white-text"type="text"  name="Owner" placeholder='Username' #owner>
     <label id="title" for="body">Description : </label>
-        <input type="text" id="desc" name="body" placeholder='' #body>
+        <input class="white-text"type="text" id="desc" name="body" placeholder='' #body>
         <button  class="btn btn-info" name="Add Post"(click)="addPost(owner.value,title.value,body.value); owner.value = ''; title.value = ''; body.value = '';">Submit</button>
         <button type="button" class="btn btn-danger ml-2" name="Close" (click)="toggleDisplay()">Cancel</button>
   </form>
