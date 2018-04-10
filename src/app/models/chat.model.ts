@@ -1,4 +1,6 @@
 export class Chat {
-  public messageArray = [];
-  constructor(public name: string) {};
+  public messageArray=[];
+  public userArray=[];
+  public name = 'Untitled Chat'
+  constructor() {};
 }

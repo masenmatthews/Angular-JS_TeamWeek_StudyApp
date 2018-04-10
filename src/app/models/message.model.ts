@@ -1,6 +1,5 @@
 export class Message {
-  createTime = new Date();
+  public createTime = '';
   public read: Boolean = false;
-  constructor(public userKey: string, public body: string) {};
-
+  constructor(public body: string, public sender: string) {};
 }

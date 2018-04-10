@@ -40,7 +40,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'chat',
-    component: ChatComponent
+    component: ChatComponent,
+    canActivate: [AuthGuardService]
   }
 
   // {
