@@ -33,23 +33,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * In order to view the application without running through the setup process, navigate to INSERT URL HERE in Google Chrome or another web browser.
 
 ## Specifications
-  *User can post text submissions in the forum
-  *User can comment on posts within the forum
-  *User can use the chat feature to send and receive messages
-  *User can log into an account and access features based on their login status
-  *User can access and read blog posts
+  * User can post text submissions in the forum
+  * User can comment on posts within the forum
+  * User can use the chat feature to send and receive messages
+  * User can log into an account and access features based on their login status
+  * User can access and read blog posts
 
 ## Future expansion
 
 ## Technologies Used
 
-* HTML
-* CSS
-* Typescript/Javascript
-* Angular
-* Bootstrap
-* jQuery
-* Materialize
+  * HTML
+  * CSS
+  * Typescript/Javascript
+  * Angular
+  * Bootstrap
+  * jQuery
+  * Materialize
 
 ## Known Bugs and Issues
 
