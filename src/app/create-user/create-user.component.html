@@ -1,72 +1,71 @@
-<!-- <div class="container">
-    <div class="row">
-      <div class="z-depth-4 col s12 md6">
-        <div class="card">
-          <div class="card-content blue-grey white-text">
-            <span class="card-title white-text ">Create New Account</span>
-          </div>
-          <div class="card-content blue-grey darken-2">
-            <div class="row m-valign-wrapper">
-              <mz-input-container class="col s12 m6">
-                <input #newUserName class="white-text" mz-input
-                  [label]="'User Name'"
-                  id="userNameInput"
-                  placeholder="Choose a unique username"
-                  type="text" required>
-              </mz-input-container>
-              <mz-input-container class="col s12 m6">
-                <input #newEmail class="white-text"mz-input
-                  [label]="'Email'"
-                  id="emailInput"
-                  placeholder="Enter Email"
-                  type="email" required>
-              </mz-input-container>
-              <mz-input-container class="col s12 m6">
-                <input #newPassword class="validate" aria-required="true" required="" mz-input
-                  [label]="'Password'"
-                  id="passwordInput"
-                  placeholder="Enter Password"
-                  type="text">
-              </mz-input-container>
-              <button type="submit" class="btn waves-effect waves-light" (click)="createAccount(newUserName.value, newEmail.value, newPassword.value)">Add Account</button>
+<div class="container">
+  <button class="btn blue-grey lighten-1" (click)="beginLogin()">Sign In</button>
+  <button class="btn blue-grey lighten-1" (click)="beginCreate()">Create Account</button>
+  <div *ngIf="creating">
+      <div class="row">
+          <div class="z-depth-4 col s12 md6">
+            <div class="card">
+              <div class="card-content blue-grey white-text">
+                <span class="card-title white-text">Create New Account</span>
+              </div>
+              <div class="card-content blue-grey darken-2">
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input #newName id="userName" type="text" class="validate white-text" required="" aria-required="true">
+                        <label for="userName">User Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input #newEmail id="email" type="email" class="validate white-text" required="" aria-required="true">
+                        <label for="email">Email</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input #newPassword id="password" name="password" type="password" class="validate white-text" required="" aria-required="true">
+                        <label for="password">Password</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <button (click)="createAccount(newName.value, newEmail.value, newPassword.value)"class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-    </div>
-</div> -->
-
-<div class="container">
-  <div class="row">
-    <div class="z-depth-4 col s12 md6">
-      <div class="card">
-        <div class="card-content blue-grey white-text">
-          <span class="card-title white-text">Create New Account</span>
-        </div>
-        <div class="card-content blue-grey darken-2">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input #newName id="userName" type="text" class="validate white-text" required="" aria-required="true">
-                  <label for="userName">User Name</label>
-                </div>
-                <div class="input-field col s12">
-                  <input #newEmail id="email" type="email" class="validate white-text" required="" aria-required="true">
-                  <label for="email">Email</label>
-                </div>
-                <div class="input-field col s12">
-                  <input #newPassword id="password" name="password" type="password" class="validate white-text" required="" aria-required="true">
-                  <label for="password">Password</label>
-                </div>
-                <div class="input-field col s12">
-                  <button (click)="createAccount(newName.value, newEmail.value, newPassword.value)"class="btn waves-effect waves-light" type="button" name="action">Submit</button>
+  </div>
+  <div *ngIf="loggingIn">
+      <div class="row">
+          <div class="z-depth-4 col s12 md6">
+            <div class="card">
+              <div class="card-content blue-grey white-text">
+                <span class="card-title">Sign In</span>
+              </div>
+              <div class="card-content blue-grey darken-2">
+                <div class="row">
+                  <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input #email  type="text" class="validate white-text" required="" aria-required="true">
+                            <label for="email">Email</label>
+                          </div>
+                          <div class="input-field col s12">
+                              <input #password id="password" name="password" type="password" class="validate white-text" required="" aria-required="true">
+                              <label for="password">Password</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <button (click)="logIn(email.value,  password.value)"class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Login</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
   </div>
+  
 </div>
+
+

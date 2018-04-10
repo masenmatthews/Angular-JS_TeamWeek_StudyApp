@@ -29,4 +29,8 @@ export class AuthService {
     createUser(email, password) {
       firebase.auth().createUserWithEmailAndPassword(email, password)
     }
+
+    logout() {
+      this.afAuth.auth.signOut().then((res) => this.router.navigate(['/']))
+    }
 }
