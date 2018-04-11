@@ -12,7 +12,7 @@ import { Message } from '../models/message.model';
   providers: [ChatService, AuthService]
 })
 export class ChatDetailComponent implements OnInit {
-  chatToDisplay;
+  chatToDisplay = null;
   chatId: string;
   public currentUser;
 
@@ -22,8 +22,10 @@ export class ChatDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.chatId = urlParameters['id'];
     });
-    this.chatToDisplay = this.chatService.getChatById(this.chatId).subscribe(dataLastEmittedFromObserver => {
+    this.chatToDisplay = this.chatService.getChatById(this.chatId)
+    .subscribe(dataLastEmittedFromObserver => {
       this.chatToDisplay = dataLastEmittedFromObserver;
+      console.log(this.chatToDisplay)
     });
     this.currentUser = this.authService.userDetails.email;
   }
