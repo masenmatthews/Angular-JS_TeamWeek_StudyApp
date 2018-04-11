@@ -6,12 +6,15 @@
     <mz-card-content>
       <label>Name your Chat:</label>
       <input type="text" #chatTitle>
+      <label>Add A Message:</label>
+      <input placeholder="If left blank chat will start with default message" type="text" #chatMessage>
       <div class="row">
         <div class="col s12 m6 l6">
           <a mz-button id="btn-dropdown-basic" class="btn blue-grey lighten-1" href="javascript:void(0)">ADD USERS</a>
           <mz-dropdown [id]="'dropdown'" [dropdownButtonId]="'btn-dropdown-basic'">
             <div *ngFor="let user of users">
               <div *ngIf='currentUser?.email != user.email'>
+                <div *ngIf='!isInArray(user.email)'></div>
                 <li (click)='addToChat(user.email)'>{{user.displayName}}</li>
               </div>
             </div>
@@ -28,7 +31,7 @@
           </ul>
         </div>
       </div>
-      <button class="btn blue-grey lighten-1" (click)='startChat(chatTitle.value)' routerLink='/chat'>Start Chat</button>
+      <button class="btn blue-grey lighten-1" (click)='startChat(chatTitle.value, chatMessage.value)' routerLink='/chat'>Start Chat</button>
     </mz-card-content>
   </mz-card>
 </div>

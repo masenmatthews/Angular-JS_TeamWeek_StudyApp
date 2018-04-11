@@ -24,7 +24,6 @@ export class ChatDetailComponent implements OnInit {
     });
     this.chatToDisplay = this.chatService.getChatById(this.chatId).subscribe(dataLastEmittedFromObserver => {
       this.chatToDisplay = dataLastEmittedFromObserver;
-      console.log(this.chatToDisplay)
     });
     this.currentUser = this.authService.userDetails.email;
   }
@@ -38,9 +37,11 @@ export class ChatDetailComponent implements OnInit {
   }
 
   reply(reply: string) {
+    const date = new Date();
+    const dateString = date.toString();
     let newMessage = new Message(reply, this.currentUser)
-    this.chatToDisplay.messageArray.push(newMessage);
+    newMessage.createTime = dateString;
+    this.chatToDisplay.messageArray.unshift(newMessage);
     this.chatService.sendMessage(this.chatToDisplay);
   }
-
 }

@@ -1,32 +1,42 @@
-<div *ngFor="let message of chatToDisplay?.messageArray">
-  <div *ngIf="checkForSender(message.sender)">
-    <h3 class="right-align title">{{message.body}}</h3>
-  </div>
-  <div *ngIf="!checkForSender(message.sender)">
-    <h3 class="left-align title">{{message.body}}</h3>
+<div class="container">
+  <div id='message-window'>
+  <div *ngFor="let message of chatToDisplay.messageArray">
+    <div *ngIf="checkForSender(message.sender)">
+      <div class="message-user">
+        <h3 class="message-body">{{message.body}}</h3>
+        <p class="right-align message-sender">{{message.sender}} - {{message.createTime}}</p>
+      </div>
+    </div>
+    <div *ngIf="!checkForSender(message.sender)">
+      <div class="message-other">
+        <h3 class="message-body">{{message.body}}</h3>
+        <p class="left-align message-sender">{{message.sender}} - {{message.createTime}}</p>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="z-depth-4 col s12 md6">
-    <div class="card">
-      <div class="card-content blue-grey white-text">
-        <span class="card-title white-text">
-          Reply
-        </span>
-      </div>
-      <div class="card-content blue-grey darken-2">
-        <div class="row">
-          <div class="col s12">
-            <div class="input-field col s12">
-              <input #newReply type="text" class="validate white-text" required="" aria-required="true">
-              <label for="reply">Reply</label>
-            </div>
-            <div class="input-field col s12">
-              <button (click)="reply(newReply.value); newReply.value='';" class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Reply</button>
+  <div class="row">
+    <div class="z-depth-4 col s12 md6">
+      <div class="card">
+        <div class="card-content blue-grey white-text">
+          <span class="card-title white-text">
+            Reply
+          </span>
+        </div>
+        <div class="card-content blue-grey darken-2">
+          <div class="row">
+            <div class="col s12">
+              <div class="input-field col s12">
+                <input #newReply type="text" class="validate white-text" required="" aria-required="true">
+                <label for="reply">Reply</label>
+              </div>
+              <div class="input-field col s12">
+                <button (click)="reply(newReply.value); newReply.value='';" class="btn waves-effect waves-light blue-grey lighten-1" type="button"
+                  name="action">Reply</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

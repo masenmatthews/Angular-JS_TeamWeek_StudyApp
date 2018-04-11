@@ -46,7 +46,6 @@ export const firebaseConfig = {
   databaseURL: firebaseApiKey.databaseURL,
   storageBucket: firebaseApiKey.storageBucket
 }
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -2,7 +2,46 @@
     text-align: right!important;
 }
 
-.title {
+#message-window {
     color: white;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.685);
-  }
+    max-height: 700px;
+    width: 100%;
+    background-color: #49596298;
+    overflow-y: auto;
+}
+
+.message-other {
+    width: 90%;
+    padding-top:1px;
+    padding-bottom: 2%;
+    padding-right: 3%;
+    padding-left: 3%;
+    margin-right: auto;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: rgba(208, 208, 253, 0.664);
+    border-radius: 10px;
+}
+
+.message-user{
+    width: 90%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+    padding-left: 3%;
+    margin-right: 5px;
+    margin-left: auto;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 255, 0.664);
+    border-radius: 10px;
+}
+
+.message-sender{
+    font-size: 10px;
+    margin-top: -2px;
+}
+
+.message-body{
+    margin-top: 0px;
+    font-size: 20px;
+}

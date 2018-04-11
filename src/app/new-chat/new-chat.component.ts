@@ -46,9 +46,15 @@ export class NewChatComponent implements OnInit {
     this.usersToBeAdded.splice(idx, 1);
   }
 
-  startChat(name: string) {
+  startChat(name: string, message: string) {
+    console.log(message);
+    let defaultMessage;
+    if (message === ''){
+      defaultMessage = new Message(this.currentUser.email + ' has started a chat with you!', this.currentUser.email);
+    } else {
+      defaultMessage = new Message(message, this.currentUser.email);
+    }
     const currentTime = new Date();
-    const defaultMessage = new Message('Look a new chat!', this.currentUser.email);
     const newChat = new Chat(name);
     defaultMessage.createTime = currentTime.toDateString();
     newChat.messageArray = [defaultMessage];
