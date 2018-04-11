@@ -40,7 +40,7 @@ export class ChatDetailComponent implements OnInit {
 
   reply(reply: string) {
     if (reply === '') {
-      return alert('Cant sent an empty message!')
+      return alert('Cant send an empty message!')
     }
     const date = new Date();
     const dateString = date.toString();
