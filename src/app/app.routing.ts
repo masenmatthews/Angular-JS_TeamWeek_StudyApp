@@ -10,6 +10,7 @@ import { ChatDetailComponent } from './chat-detail/chat-detail.component'
 //forum
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 import { AuthGuardService } from './auth-guard.service'
@@ -21,7 +22,7 @@ export const appRoutes: Routes = [
   {
      path: '',
      component: WelcomeComponent
-   },
+  },
   {
     path: 'posts',
     component: PostListComponent
@@ -36,9 +37,12 @@ export const appRoutes: Routes = [
     component: PostDetailComponent
   },
   {
+    path: 'blog',
+    component: BlogComponent
+  },
+  {
     path: 'createUser',
     component: CreateUserComponent
-
   },
   {
     path: 'chat',

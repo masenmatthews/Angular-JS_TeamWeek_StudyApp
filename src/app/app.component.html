@@ -19,7 +19,10 @@
           <a id="logout" (click)="logout()">Logout</a>
         </li>
       </div>
-      <div *ngIf='!loggedIn'>
+      <li class="tab">
+        <a id="blog" routerLink="/blog">Blog</a>
+      </li>
+      <div *ngIf="loggedOut">
         <li class="tab">
           <a class="navLinkLog" routerLink="/createUser">Login</a>
         </li>
@@ -56,4 +59,3 @@
   <mz-sidenav-link>
     <a mz-icon-mdi [icon]="'earth'">Fourth Link With Icon</a>
   </mz-sidenav-link>
-  <mz-sidenav-divider></mz-sidenav-divider>

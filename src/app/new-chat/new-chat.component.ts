@@ -6,7 +6,6 @@ import { Router } from '@angular/router'
 import { Message } from '../models/message.model';
 import { Chat } from '../models/chat.model';
 import { User } from '../models/user.model';
-import { REACTIVE_DRIVEN_DIRECTIVES } from '@angular/forms';
 
 @Component({
   selector: 'app-new-chat',

@@ -7,7 +7,7 @@
     <div class="z-depth-4 col s12 md6">
       <div *ngFor="let post of posts | async" class="card">
         <div class="card-content blue-grey white-text">
-          <span class="card-title">Title: {{post.title}}</span>
+          <span class="card-title">Title: {{post .title}}</span>
         </div>
         <div class="card-content white-text blue-grey darken-2">
           <div class="row">
@@ -30,16 +30,13 @@
                           <br>
                           <button type="button" class="btn btn-success" name="button" (click)="details(post)">More Details</button>
                         </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
-        </div>
-      </div>
-    </div>
   </div>
+</div>

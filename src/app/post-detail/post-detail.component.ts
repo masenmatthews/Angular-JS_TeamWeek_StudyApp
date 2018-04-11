@@ -23,8 +23,12 @@ export class PostDetailComponent implements OnInit {
         this.postKey = urlParameters['id'];
       });
       this.forumService.getPostByKey(this.postKey).subscribe(dataLastEmittedFromObserver => {
+<<<<<<< HEAD
      this.postDetail = dataLastEmittedFromObserver;
       });
+=======
+     this.postDetail = dataLastEmittedFromObserver;});
+>>>>>>> 66285ebf755490f7d2584a00becbf76584cfbf02
     }
 
     addComment(com: string) {
