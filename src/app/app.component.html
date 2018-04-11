@@ -22,7 +22,7 @@
       <li class="tab">
         <a id="blog" routerLink="/blog">Blog</a>
       </li>
-      <div *ngIf="loggedOut">
+      <div *ngIf="!loggedIn">
         <li class="tab">
           <a class="navLinkLog" routerLink="/createUser">Login</a>
         </li>

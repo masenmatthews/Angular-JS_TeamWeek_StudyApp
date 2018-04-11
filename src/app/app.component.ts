@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Chat App';
   public loggedIn: Boolean;
+  public isAdmin: Boolean;
   public currentUser;
   public userInfo;
 
@@ -47,7 +48,11 @@ export class AppComponent implements OnInit {
   findInfo(){
     this.currentUser = this.authService.userDetails.email
     this.userInfo = this.userService.getUserByEmail(this.currentUser)
-
+    if (this.currentUser.isAdmin = true){
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
   }
 
   testButton() {

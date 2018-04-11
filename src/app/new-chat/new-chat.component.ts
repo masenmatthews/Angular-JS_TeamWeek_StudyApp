@@ -17,7 +17,7 @@ import { User } from '../models/user.model';
 export class NewChatComponent implements OnInit {
   userDisplay;
   users;
-  currentUser; 
+  currentUser;
   usersToBeAdded: string[] = [];
 
   constructor(private router: Router, private userService: UserService, private authService: AuthService, private chatService: ChatService) { }
@@ -47,9 +47,11 @@ export class NewChatComponent implements OnInit {
   }
 
   startChat(name: string, message: string) {
-    console.log(message);
     let defaultMessage;
-    if (message === ''){
+    if (this.usersToBeAdded.length < 1) {
+      return alert('Please add at least one user to chat with!')
+    }
+    if (message === '') {
       defaultMessage = new Message(this.currentUser.email + ' has started a chat with you!', this.currentUser.email);
     } else {
       defaultMessage = new Message(message, this.currentUser.email);
@@ -61,17 +63,6 @@ export class NewChatComponent implements OnInit {
     this.usersToBeAdded.push(this.currentUser.email);
     newChat.userArray = this.usersToBeAdded;
     this.chatService.addChat(newChat);
-  }
-
-  reply(chat) {
-    this.router.navigate(['chat', chat.$key])
-  }
-
-  archiveChat(chat) {
-    if (confirm('Are you sure you want to archive this chat?')) {
-      chat.isArchived = true;
-      this.chatService.archive(chat);
-    }
   }
 }
 

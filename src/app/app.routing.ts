@@ -30,7 +30,7 @@ export const appRoutes: Routes = [
   // {
   //   path: 'admin',
   //   component: AdminComponent
-      //  canActivate: [AuthGuardService]
+  //  canActivate: [AuthGuardService]
   // },
   {
     path: 'posts/:id',
@@ -59,10 +59,5 @@ export const appRoutes: Routes = [
     component: ChatDetailComponent,
     canActivate: [AuthGuardService]
   }
-
-  // {
-  //   path: '',
-  //   component: CommentComponent
-  // }
  ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
