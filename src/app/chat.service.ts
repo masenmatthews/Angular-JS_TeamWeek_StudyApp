@@ -27,5 +27,10 @@ export class ChatService {
     chat.update({messageArray: currentChat.messageArray});
   }
 
+  archive(currentChat) {
+    const chat = this.getChatById(currentChat.$key);
+    chat.update({isArchived: currentChat.isArchived});
+  }
+
 }
 

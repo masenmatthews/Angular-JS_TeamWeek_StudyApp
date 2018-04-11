@@ -1,6 +1,6 @@
 export class Chat {
   public messageArray=[];
   public userArray=[];
-  public name = 'Untitled Chat'
-  constructor() {};
+  public isArchived: boolean = false;
+  constructor(public name: string) {};
 }

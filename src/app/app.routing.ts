@@ -13,6 +13,7 @@ import { PostListComponent } from './post-list/post-list.component';
 
 
 import { AuthGuardService } from './auth-guard.service'
+import { NewChatComponent } from './new-chat/new-chat.component';
 //Admin
 // import { AdminComponent } from './admin/admin.component';
 
@@ -42,6 +43,11 @@ export const appRoutes: Routes = [
   {
     path: 'chat',
     component: ChatComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'chat/new-chat',
+    component: NewChatComponent,
     canActivate: [AuthGuardService]
   },
   {

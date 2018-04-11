@@ -15,7 +15,6 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Chat App';
   public loggedIn: Boolean;
-  public loggedOut: Boolean = true;
   public currentUser;
   public userInfo;
 
@@ -27,6 +26,13 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.loggedIn = false;
+      } else {
+        this.loggedIn = true;
+      }
+    })
     this.loggedIn = this.create.loggingIn;
     this.users = this.userService.getUsers();
 
@@ -36,7 +42,6 @@ export class AppComponent implements OnInit {
     this.authService.logout();
     location.reload();
     this.loggedIn = false;
-    this.loggedOut = true;
   }
 
   findInfo(){

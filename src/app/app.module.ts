@@ -34,6 +34,7 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { UserService } from './user.service';
 import { ChatDetailComponent } from './chat-detail/chat-detail.component';
 import { ReversePipe } from './reverse.pipe';
+import { NewChatComponent } from './new-chat/new-chat.component';
 
 //Configure firebase
 export const firebaseConfig = {
@@ -55,7 +56,8 @@ export const firebaseConfig = {
     AddCommentComponent,
     CommentListComponent,
     ChatDetailComponent,
-    ReversePipe
+    ReversePipe,
+    NewChatComponent
   ],
   imports: [
     BrowserModule,

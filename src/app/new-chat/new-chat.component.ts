@@ -5,46 +5,56 @@ import { ChatService } from '../chat.service';
 import { Router } from '@angular/router'
 import { Message } from '../models/message.model';
 import { Chat } from '../models/chat.model';
-
+import { User } from '../models/user.model';
+import { REACTIVE_DRIVEN_DIRECTIVES } from '@angular/forms';
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css'],
-  providers: [UserService, ChatService]
+  selector: 'app-new-chat',
+  templateUrl: './new-chat.component.html',
+  styleUrls: ['./new-chat.component.css'],
+  providers: [UserService, ChatService, AuthService]
 })
-export class ChatComponent implements OnInit {
+
+export class NewChatComponent implements OnInit {
   userDisplay;
   users;
-  chats;
-  public currentUser = this.authService.userDetails;
+  currentUser; 
+  usersToBeAdded: string[] = [];
+
   constructor(private router: Router, private userService: UserService, private authService: AuthService, private chatService: ChatService) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
       this.userDisplay = dataLastEmittedFromObserver;
       this.users = this.userDisplay;
-    })
-    this.chatService.getChats().subscribe(dataLastEmittedFromObserver => {
-      this.chats = dataLastEmittedFromObserver;
     });
+    this.currentUser = this.authService.userDetails;
   }
 
-  checkEmail(recipient) {
-    if (this.currentUser.email === recipient) {
+  isInArray(email: string) {
+    if (this.usersToBeAdded.includes(email)) {
       return true;
     } else {
       return false;
     }
   }
 
-  startChat(user) {
+  addToChat(email: string) {
+    this.usersToBeAdded.push(email);
+  }
+
+  removeFromChat(idx) {
+    this.usersToBeAdded.splice(idx, 1);
+  }
+
+  startChat(name: string) {
     const currentTime = new Date();
     const defaultMessage = new Message('Look a new chat!', this.currentUser.email);
-    const newChat = new Chat();
+    const newChat = new Chat(name);
     defaultMessage.createTime = currentTime.toDateString();
     newChat.messageArray = [defaultMessage];
-    newChat.userArray = [this.currentUser.email, user.email]
+    this.usersToBeAdded.push(this.currentUser.email);
+    newChat.userArray = this.usersToBeAdded;
     this.chatService.addChat(newChat);
   }
 
@@ -59,3 +69,4 @@ export class ChatComponent implements OnInit {
     }
   }
 }
+

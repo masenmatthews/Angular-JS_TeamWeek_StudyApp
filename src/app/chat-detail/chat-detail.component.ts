@@ -9,7 +9,7 @@ import { Message } from '../models/message.model';
   selector: 'app-chat-detail',
   templateUrl: './chat-detail.component.html',
   styleUrls: ['./chat-detail.component.css'],
-  providers: [ ChatService, AuthService ]
+  providers: [ChatService, AuthService]
 })
 export class ChatDetailComponent implements OnInit {
   chatToDisplay;

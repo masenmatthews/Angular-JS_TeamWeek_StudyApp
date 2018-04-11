@@ -11,6 +11,7 @@ import { CreateUserComponent } from './create-user/create-user.component'
 export class AuthService {
   public user: Observable<firebase.User>;
   public userDetails: firebase.User = null;
+
   constructor(public afAuth: AngularFireAuth, private router: Router, private userService: UserService) {
     this.user = afAuth.authState;
     this.user.subscribe(
@@ -22,6 +23,7 @@ export class AuthService {
     }
     )
   }
+  
   login(email, password) {
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
       let errorMessage = error.message;
