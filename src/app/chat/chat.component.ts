@@ -30,23 +30,13 @@ export class ChatComponent implements OnInit {
     });
   }
 
-  checkEmail(recipient) {
-    if (this.currentUser.email === recipient) {
+  checkMember(userArray: string[]){
+    if (userArray.includes(this.currentUser.email)) {
       return true;
     } else {
       return false;
     }
-  }
-
-  startChat(user) {
-    const currentTime = new Date();
-    const defaultMessage = new Message('Look a new chat!', this.currentUser.email);
-    const newChat = new Chat();
-    defaultMessage.createTime = currentTime.toDateString();
-    newChat.messageArray = [defaultMessage];
-    newChat.userArray = [this.currentUser.email, user.email]
-    this.chatService.addChat(newChat);
-  }
+  }    
 
   reply(chat) {
     this.router.navigate(['chat', chat.$key])
