@@ -34,6 +34,9 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { UserService } from './user.service';
 import { ChatDetailComponent } from './chat-detail/chat-detail.component';
 import { ReversePipe } from './reverse.pipe';
+import { BlogComponent } from './blog/blog.component';
+import { AddBlogPostComponent } from './add-blog-post/add-blog-post.component';
+import { RemoveBlogPostComponent } from './remove-blog-post/remove-blog-post.component';
 
 //Configure firebase
 export const firebaseConfig = {
@@ -55,7 +58,10 @@ export const firebaseConfig = {
     AddCommentComponent,
     CommentListComponent,
     ChatDetailComponent,
-    ReversePipe
+    ReversePipe,
+    BlogComponent,
+    AddBlogPostComponent,
+    RemoveBlogPostComponent
   ],
   imports: [
     BrowserModule,
