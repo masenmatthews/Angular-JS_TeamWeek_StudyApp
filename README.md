@@ -30,7 +30,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Navigate to localhost:4200 in Google Chrome or desired browser
 
 ## Viewing application via Firebase
-  * In order to view the application without running through the setup process, navigate to INSERT URL HERE in Google Chrome or another web browser.
+  * In order to view the application without running through the setup process, navigate to https://epicodus-c4877.firebaseapp.com/ in Google Chrome or another web browser.
 
 ## Specifications
   * User can post text submissions in the forum
@@ -40,6 +40,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * User can access and read blog posts
 
 ## Future expansion
+  * N/A
 
 ## Technologies Used
 
