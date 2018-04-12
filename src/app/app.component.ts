@@ -56,7 +56,6 @@ export class AppComponent implements OnInit {
   }
 
   checkForAdmin() {
-    console.log(this.currentUser);
     if (this.currentUser === "admin@admin.com") {
       return true
     } else {
