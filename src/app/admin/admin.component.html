@@ -1,0 +1,22 @@
+<div class="container">
+<div *ngFor='let chat of chats'>
+    <mz-card class='blue-grey darken-1 white-text'>
+      <mz-card-title>
+        <h4 class="chatTitle">{{chat.name}}</h4>
+      </mz-card-title>
+      <mz-card-content>
+        <div class="row">
+          <div class="col m6">
+            <h5 class="userListTitle">Chat Members:</h5>
+            <div *ngFor='let user of chat.userArray'>
+              <p class="userList">{{user}}</p>
+            </div>
+          </div>
+          <div class="col m6">
+            <button (click)="delete(chat)" class="btn blue-grey lighten-1 reply-btn">Delete</button>
+          </div>
+        </div>
+      </mz-card-content>
+    </mz-card>
+
+</div>

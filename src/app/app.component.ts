@@ -32,11 +32,11 @@ export class AppComponent implements OnInit {
         this.loggedIn = false;
       } else {
         this.loggedIn = true;
+        this.currentUser = this.authService.userDetails.email;
       }
     })
     this.loggedIn = this.create.loggingIn;
     this.users = this.userService.getUsers();
-
   }
 
   logout() {
@@ -52,6 +52,15 @@ export class AppComponent implements OnInit {
       this.isAdmin = true;
     } else {
       this.isAdmin = false;
+    }
+  }
+
+  checkForAdmin() {
+    console.log(this.currentUser);
+    if (this.currentUser === "admin@admin.com") {
+      return true
+    } else {
+      return false;
     }
   }
 

@@ -32,5 +32,10 @@ export class ChatService {
     chat.update({isArchived: currentChat.isArchived});
   }
 
+  deleteChat(localChat) {
+    let chatInFirebase = this.getChatById(localChat.$key);
+    chatInFirebase.remove();
+  }
+
 }
 

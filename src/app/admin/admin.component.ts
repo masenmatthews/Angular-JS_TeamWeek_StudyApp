@@ -8,12 +8,12 @@ import { Chat } from '../models/chat.model';
 
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css'],
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css'],
   providers: [UserService, ChatService]
 })
-export class ChatComponent implements OnInit {
+export class AdminComponent implements OnInit {
   userDisplay;
   users;
   chats;
@@ -38,9 +38,8 @@ export class ChatComponent implements OnInit {
     }
   }    
 
-  reply(chat) {
-    this.router.navigate(['chat', chat.$key]);
-    window.location.reload(true);
+  delete(chat) {
+    this.chatService.deleteChat(chat);
   }
 
   archiveChat(chat) {
