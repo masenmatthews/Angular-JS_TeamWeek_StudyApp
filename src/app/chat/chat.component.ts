@@ -39,7 +39,8 @@ export class ChatComponent implements OnInit {
   }    
 
   reply(chat) {
-    this.router.navigate(['chat', chat.$key])
+    this.router.navigate(['chat', chat.$key]);
+    window.location.reload(true);
   }
 
   archiveChat(chat) {

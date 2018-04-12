@@ -38,6 +38,7 @@ import { NewChatComponent } from './new-chat/new-chat.component';
 import { BlogComponent } from './blog/blog.component';
 import { AddBlogPostComponent } from './add-blog-post/add-blog-post.component';
 import { RemoveBlogPostComponent } from './remove-blog-post/remove-blog-post.component';
+import { AdminComponent } from './admin/admin.component';
 
 //Configure firebase
 export const firebaseConfig = {
@@ -63,7 +64,8 @@ export const firebaseConfig = {
     NewChatComponent,
     BlogComponent,
     AddBlogPostComponent,
-    RemoveBlogPostComponent
+    RemoveBlogPostComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
