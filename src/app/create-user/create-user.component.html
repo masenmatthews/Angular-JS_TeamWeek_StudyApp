@@ -35,7 +35,7 @@
           </div>
         </div>
   </div>
-  <div *ngIf="loggingIn">
+    <div *ngIf="loggingIn">
       <div class="row">
           <div class="z-depth-4 col s12 md6">
             <div class="card">
@@ -46,17 +46,16 @@
                 <div class="row">
                   <div class="col s12">
                     <div class="row">
+                      <div class="input-field col s12">
+                        <input #email  type="text" class="validate white-text" required="" aria-required="true">
+                        <label for="email">Email</label>
+                        </div>
                         <div class="input-field col s12">
-                            <input #email  type="text" class="validate white-text" required="" aria-required="true">
-                            <label for="email">Email</label>
+                            <input #password id="password" name="password" type="password" class="validate white-text" required="" aria-required="true">
+                            <label for="password">Password</label>
                           </div>
                           <div class="input-field col s12">
-                              <input #password id="password" name="password" type="password" class="validate white-text" required="" aria-required="true">
-                              <label for="password">Password</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <button (click)="logIn(email.value,  password.value)"class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Login</button>
-                      </div>
+                            <button (click)="logIn(email.value,  password.value)"class="btn waves-effect waves-light blue-grey lighten-1" type="button" name="action">Login</button>
                     </div>
                   </div>
                 </div>
@@ -64,8 +63,6 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
   </div>
-  
-</div>
-
-

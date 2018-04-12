@@ -12,6 +12,10 @@ li {
   text-align: center
 }
 
+.main-text {
+  text-align: center;
+}
+
 .reply-btn, .archive-btn {
   height: 100px;
   width: 125px;
