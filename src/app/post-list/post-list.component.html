@@ -1,36 +1,32 @@
 <div class="container">
-  <h1 id="title">Forum</h1>
-  <app-add-post></app-add-post>
+  <div class="card-content blue-grey white-text">
+    <h2 id="title">Forum</h2>
+  </div>
+</div>
+<app-add-post></app-add-post>
+<div class="container">
   <br>
   <br>
   <div class="row">
     <div class="z-depth-4 col s12 md6">
       <div *ngFor="let post of posts | async" class="card">
         <div class="card-content blue-grey white-text">
-          <span class="card-title">Title: {{post .title}}</span>
+          <span class="card-title">
+              <h2>Title: {{post .title}}</h2>
+          </span>
         </div>
         <div class="card-content white-text blue-grey darken-2">
           <div class="row">
-            <div class="col s12">
               <div class="row">
-                <div class="col s12 m6">
-                  <div >
-
-
-
-
-                        <div class="card-body bg-light">
-                  <br>
-                          <h2>Username: <strong>{{post.owner}}</strong></h2>
-                  <br>
-                          <h2>Summary: <strong>{{post.body}}</strong></h2>
-                  <br>
-                          <app-remove-post [postKey]="post"></app-remove-post>
-                          <br>
-                          <br>
-                          <button type="button" class="btn btn-success" name="button" (click)="details(post)">More Details</button>
-                        </div>
-                  </div>
+                <div>
+                  <div class="card-body bg-light">
+              <br>
+                  <h4>Username: <strong>{{post.owner}}</strong></h4>
+              <br>
+              <br>
+              <br>
+                  <button type="button" class="btn btn-success" name="button" (click)="details(post)">Comments</button>
+                  <app-remove-post [postKey]="post"></app-remove-post>
                 </div>
               </div>
             </div>

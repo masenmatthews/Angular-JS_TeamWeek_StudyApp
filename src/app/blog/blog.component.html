@@ -1,27 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="z-depth-4 col s12 md6">
-      <div class="card-content blue-grey white-text">
-        <h1 class="main-text"> Blog </h1>
-      </div>
-      <div class="card-content white-text blue-grey darken-2">
-        <div class="row">
-          <app-add-blog-post></app-add-blog-post>
-          <div *ngFor="let blogPost of blogPosts | async" class="card">
-            <div class="card-content blue-grey white-text">
-              <span class="card-title">Title: {{blogPost .title}}</span>
-              <h6>Uploaded by: <strong>{{blogPost.owner}}</strong></h6>
-      <br>
-              <h6><strong>{{blogPost.body}}</strong></h6>
-      <br>
+    <div class="card-content blue-grey white-text">
+      <h2 class="main-text"> Blog </h2>
+    </div>
+    </div>
+  </div>
+  <app-add-blog-post></app-add-blog-post>
+  <br>
+<div class="container">
+  <div class="card-content white-text blue-grey darken-2">
+    <div class="row">
+      <div *ngFor="let blogPost of blogPosts | async" class="card">
+        <div class="card-content blue-grey white-text">
+          <span class="card-title">Title: {{blogPost .title}}</span>
+          <h6>Uploaded by: <strong>{{blogPost.owner}}</strong></h6>
+        <br>
+          <h6><strong>{{blogPost.body}}</strong></h6>
+        <br>
       <app-remove-blog-post [blogPostKey]="blogPost"></app-remove-blog-post>
-            </div>
-            </div>
-            <div class="main-text">
-
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
+</div>

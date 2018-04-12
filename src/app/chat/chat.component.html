@@ -1,5 +1,9 @@
 <div class="container">
-    <button routerLink='new-chat' class="btn blue-grey lighten-1 newChat-btn">Start New Chat</button>
+  <div class="card-content blue-grey white-text">
+    <h2 class="main-text"> Chat </h2>
+  </div>
+    <button routerLink='new-chat' type="button" class="btn" name="chat-button">Start New Chat</button>
+    <br>
   <div *ngFor='let chat of chats'>
     <div *ngIf='!chat.isArchived'>
       <div *ngIf='!checkMember(chat.userArray)'> </div>

@@ -4,7 +4,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-### By Masen Matthews
+### By Masen Matthews, Nicko Dela Cruz, 
 
 ## Description
   This application simulates a study space by providing chat and forum features to users. In the forum section, the user can submit a post and other users can comment on it. There is also a chat function where users can message each other. These features utilize authentification features so that users can communicate directly. Outside of this, a blog feature allows for longer text posts to be updated in a way that directly showcases the content.
@@ -30,7 +30,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Navigate to localhost:4200 in Google Chrome or desired browser
 
 ## Viewing application via Firebase
-  * In order to view the application without running through the setup process, navigate to INSERT URL HERE in Google Chrome or another web browser.
+  * In order to view the application without running through the setup process, navigate to https://epicodus-c4877.firebaseapp.com/ in Google Chrome or another web browser.
 
 ## Specifications
   * User can post text submissions in the forum
@@ -40,6 +40,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * User can access and read blog posts
 
 ## Future expansion
+  * N/A
 
 ## Technologies Used
 
