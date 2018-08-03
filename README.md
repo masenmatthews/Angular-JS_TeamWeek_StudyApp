@@ -7,7 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### By Masen Matthews, Nicko Dela Cruz, Chris Swanner, and Joel Adams
 
 ## Description
-  This application simulates a study space by providing chat and forum features to users. In the forum section, the user can submit a post and other users can comment on it. There is also a chat function where users can message each other. These features utilize authentification features so that users can communicate directly. Outside of this, a blog feature allows for longer text posts to be updated in a way that directly showcases the content.
+  This application simulates a study space by providing chat and forum features to users. In the forum section, the user can submit a post and other users can comment on it. There is also a chat function where users can message each other. These features utilize authentication features so that users can communicate directly. Outside of this, a blog feature allows for longer text posts to be updated in a way that directly showcases the content.
+
+## A Note About features
+  Please note that you must create an account and sign in to use the forum and chat features. 
 
 ## Setup/Installation Requirements
   * Download the project from the repository https://github.com/. Save the directory to the desktop or in a alternate directory.
@@ -40,7 +43,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * User can access and read blog posts
 
 ## Future expansion
-  * N/A
+  * CSS adjustments
 
 ## Technologies Used
 
