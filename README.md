@@ -16,9 +16,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - If you're on a Mac and get an error: Type "brew upgrade node"
   * Run $ npm install in the root project directory to install required dependencies
   * Run $ npm install angularfire2@4.0.0-rc.0 firebase@^3.6.6 --save" to add firebase if it isn't already in place
-  * Add a file called 'api-keys' to ../src/app. This will create a file where Firebase information can be added. The Firebase site will provide you with information that is required to add database functionality. Add the following snippet of code to this file after it is created and you have the appropriate information:
+  * Add a file called 'api-keys.ts' to ../src/app. This will create a file where Firebase information can be added. The Firebase site will provide you with information that is required to add database functionality. Add the following snippet of code to this file after it is created and you have the appropriate information:
 
-  export var masterFirebaseConfig = {
+  export var firebaseApiKey = {
       apiKey: "INSERT KEY",
       authDomain: "INSERT AUTHDOMAIN",
       databaseURL: "INSERT DATABASEURL,
@@ -60,17 +60,17 @@ There are no known bugs at this time.
 
 Support inquiries, ideas, suggestions, and other contact inquiries can be directed to any of the following contributors:
 
-Masen:
-Github - masenmatthews
-Email - masenmatthews@gmail.com
+###### Masen:
+* Github - masenmatthews
+* Email - masenmatthews@gmail.com
 
-Chris:
-Github - ChrisSwanner
-Email - cmanswanner@gmail.com
+###### Chris:
+* Github - ChrisSwanner
+* Email - cmanswanner@gmail.com
 
-Joel:
-Github - joelaphoto
-Email - joeladamsdesign@gmail.com
+###### Joel:
+* Github - joelaphoto
+* Email - joeladamsdesign@gmail.com
 
 ## Development server
 
