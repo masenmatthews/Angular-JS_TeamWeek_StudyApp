@@ -6,6 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### By Masen Matthews, Nicko Dela Cruz, Chris Swanner, and Joel Adams
 
+## IMPORTANT: Bugs and Issues
+
+  I made this application a while ago and there are a few bugs that have come to the surface in the time since I've hosted it. Specifically, there are some issues with the chat service and I would also like to make some CSS adjustments. This application has a number of outdated NPM dependencies that make pushing an update somewhat difficult. I am working on fixing osme of these bugs and will push an update when I can be sure that it won't break the site entirely. 
+
 ## Live Preview
 
   To view a live preview of this site, point your browser to https://angular-teameek-study-app.firebaseapp.com
@@ -58,10 +62,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Bootstrap
   * jQuery
   * Materialize
-
-## Known Bugs and Issues
-
-There are no known bugs at this time.
 
 ## Support and contact details
 
